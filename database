@@ -1,0 +1,50 @@
+create rabit_moon;
+
+-- create buyer table in mysql database
+
+ create table Buyer
+     (
+       B_id int primary key AUTO_INCREMENT,
+       B_name varchar(30) not null,
+       B_email varchar(30) not null UNIQUE,
+       B_password varchar(25) not null UNIQUE
+     );
+
+
+
+-- create Seller table in mysql database
+
+create table Seller
+     (
+     S_id int primary key auto_increment,
+     S_name varchar(30) not null,
+     S_email varchar(30) not null UNIQUE,
+     S_password varchar(25) not null UNIQUE
+     );
+     
+     
+
+-- create Product table in mysql database
+
+create table Product
+(
+   P_id int primary key,
+   P_name varchar(100) not null, 
+   P_price int not null, 
+   P_quantity int not null,
+   P_categort varchar(100) ,
+   Seller_Id int,
+   Foreign Key(Seller_Id) references Seller(S_id)
+);
+
+
+
+-- create sold items table in mysql database
+
+Create table Sold
+(
+  Buyer_id int,
+  Item_Id int,
+  Foreign Key(Buyer_Id) references Buyer(B_id),
+  Foreign Key(Item_Id) references Product(P_ID)
+);
