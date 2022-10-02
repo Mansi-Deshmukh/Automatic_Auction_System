@@ -1,50 +1,59 @@
-create rabit_moon;
+create auction_system;
 
 -- create buyer table in mysql database
 
- create table Buyer
-     (
-       B_id int primary key AUTO_INCREMENT,
-       B_name varchar(30) not null,
-       B_email varchar(30) not null UNIQUE,
-       B_password varchar(25) not null UNIQUE
-     );
+create table buyer(
+bid int primary key auto_increment,
+name varchar(20) not null,
+email varchar(25) not null unique,
+ password varchar(15) not null unique
+);
+
+
+
+--butlist table
+
+create table buylist
+(
+ buyerId int,
+ itemId int primary key,
+ Foreign key (buyerId) references buyer(bid),
+ Foreign key (itemId) references sellItem(itemId)
+);
 
 
 
 -- create Seller table in mysql database
 
-create table Seller
-     (
-     S_id int primary key auto_increment,
-     S_name varchar(30) not null,
-     S_email varchar(30) not null UNIQUE,
-     S_password varchar(25) not null UNIQUE
-     );
-     
-     
 
--- create Product table in mysql database
-
-create table Product
+create table seller
 (
-   P_id int primary key,
-   P_name varchar(100) not null, 
-   P_price int not null, 
-   P_quantity int not null,
-   P_categort varchar(100) ,
-   Seller_Id int,
-   Foreign Key(Seller_Id) references Seller(S_id)
+sid int Primary key auto_increment,
+name varchar(20) not null,
+email varchar(25) not null unique,
+password varchar(15) not null unique
 );
 
 
 
--- create sold items table in mysql database
+-- create Product/item table in mysql database
 
-Create table Sold
+create table sellItem
 (
-  Buyer_id int,
-  Item_Id int,
-  Foreign Key(Buyer_Id) references Buyer(B_id),
-  Foreign Key(Item_Id) references Product(P_ID)
+ItemId int primary key,
+property varchar(25) not null,
+price int not null,
+quantity int not null,
+sellingId int ,
+status varchar(15) ,
+Foreign key (sellingId) References seller(sid)
 );
+
+
+
+-- create dispute table 
+
+create table dispute(
+    -> name varchar(20),
+    -> issue varchar(30)
+    -> );
