@@ -2,10 +2,11 @@ create auction_system;
 
 -- create buyer table in mysql database
 
-create table buyer(
-bid int primary key auto_increment,
-name varchar(20) not null,
-email varchar(25) not null unique,
+create table buyer
+(
+ bid int primary key auto_increment,
+ name varchar(20) not null,
+ email varchar(25) not null unique,
  password varchar(15) not null unique
 );
 
@@ -53,7 +54,8 @@ Foreign key (sellingId) References seller(sid)
 
 -- create dispute table 
 
-create table dispute(
-    -> name varchar(20),
-    -> issue varchar(30)
-    -> );
+create table dispute
+(
+ name varchar(20),
+ issue varchar(30)  
+);
