@@ -2,17 +2,17 @@ package com.masai.bean;
 
 public class SellingList {
      private int itemId;
-     private String property;
+     private String product;
      private int price;
-     private int quntity;
+     private int quantity;
      private int sellingId;
      private String status;
 	
-	public SellingList(int itemId, String property, int price, int quntity, int sellingId, String status) {
+	public SellingList(int itemId, String product, int price, int quantity, int sellingId, String status) {
 		this.itemId = itemId;
-		this.property = property;
+		this.product = product;
 		this.price = price;
-		this.quntity = quntity;
+		this.quantity = quantity;
 		this.sellingId = sellingId;
 		this.status = status;
 	}
@@ -34,11 +34,11 @@ public class SellingList {
 	public void setItemId(int itemId) {
 		this.itemId = itemId;
 	}
-	public String getProperty() {
+	public String getProduct() {
 		return property;
 	}
-	public void setProperty(String property) {
-		this.property = property;
+	public void setProduct(String product) {
+		this.product = product;
 	}
 	public int getPrice() {
 		return price;
@@ -46,11 +46,11 @@ public class SellingList {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public int getQuntity() {
+	public int getQuantity() {
 		return quntity;
 	}
-	public void setQuntity(int quntity) {
-		this.quntity = quntity;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	public int getSellingId() {
@@ -61,7 +61,7 @@ public class SellingList {
 	}
 	@Override
 	public String toString() {
-		return "SellingList [itemId=" + itemId + ", property=" + property + ", price=" + price + ", quntity=" + quntity
+		return "SellingList [itemId=" + itemId + ", product=" + product + ", price=" + price + ", quantity=" + quantity
 				+  ", sellingId=" + sellingId + ", status=" + status + "]";
 	}
 	
