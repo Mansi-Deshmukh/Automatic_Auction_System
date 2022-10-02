@@ -35,7 +35,7 @@ public class SellingList {
 		this.itemId = itemId;
 	}
 	public String getProduct() {
-		return property;
+		return product;
 	}
 	public void setProduct(String product) {
 		this.product = product;
@@ -47,7 +47,7 @@ public class SellingList {
 		this.price = price;
 	}
 	public int getQuantity() {
-		return quntity;
+		return quantity;
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
