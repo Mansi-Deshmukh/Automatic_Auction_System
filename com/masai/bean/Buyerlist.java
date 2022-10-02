@@ -4,15 +4,15 @@ public class Buyerlist {
   private int bid;
   private String name;
   private String email;
-  private String property;
+  private String product;
   private int price;
   
-public Buyerlist(int bid, String name, String email, String property, int price) {
+public Buyerlist(int bid, String name, String email, String product, int price) {
 	super();
 	this.bid = bid;
 	this.name = name;
 	this.email = email;
-	this.property = property;
+	this.product = product;
 	this.price=price;
 }
 public int getPrice() {
@@ -55,18 +55,18 @@ public void setEmail(String email) {
 }
 
 
-public String getProperty() {
-	return property;
+public String getProduct() {
+	return product;
 }
 
 
-public void setProperty(String property) {
-	this.property = property;
+public void setProduct(String product) {
+	this.product = product;
 }
 
 @Override
 public String toString() {
-	return "Buyerlist [bid=" + bid + ", name=" + name + ", email=" + email + ", property=" + property + ", price="
+	return "Buyerlist [bid=" + bid + ", name=" + name + ", email=" + email + ", product=" + product + ", price="
 			+ price + "]";
 }
 
