@@ -42,7 +42,7 @@ password varchar(15) not null unique
 create table sellItem
 (
 ItemId int primary key,
-property varchar(25) not null,
+product varchar(25) not null,
 price int not null,
 quantity int not null,
 sellingId int ,
