@@ -19,8 +19,7 @@ public static Connection provideConnection() {
 		}
 		
 	String url="jdbc:mysql://localhost:3306/auction_system";
-//String url="jdbc:mysql://localhost:3306/web19sb101db";
-	
+
 	 
 	
 
@@ -28,13 +27,10 @@ public static Connection provideConnection() {
 		try {
 			conn= DriverManager.getConnection(url,"root","java");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
-		
-		
-		
-		
+
 		return conn;
 		
 	}
